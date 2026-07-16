@@ -1,5 +1,7 @@
 # 量化引擎 MCP 服务器 (mcp-quant-engine)
 
+[![CI](https://github.com/wzx11223344/mcp-quant-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/wzx11223344/mcp-quant-engine/actions/workflows/ci.yml)
+
 基于 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) 的量化金融计算服务器，使用 [FastMCP](https://github.com/modelcontextprotocol/python-sdk) 框架，为 AI 客户端（如 Claude）提供专业的金融数学计算工具。
 
 ## 功能概览
@@ -140,6 +142,21 @@ mcp-quant-engine/
 ├── README.md
 ├── SKILL.md
 └── requirements.txt
+```
+
+## 测试
+
+运行单元测试：
+
+```bash
+pip install pytest flake8
+pytest tests/ -v --tb=short
+```
+
+代码质量检查：
+
+```bash
+flake8 . --count --max-line-length=120 --statistics
 ```
 
 ## 许可证
